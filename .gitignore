@@ -1,0 +1,22 @@
+#
+#Idea ide project file
+#######################################
+java_restful.iws
+java_restful.iml
+java_restful.ipr
+#Compiled source
+#######################################
+precompiled/
+tmp/
+logs/
+
+production/
+*.class
+
+target/
+.idea/
+
+
+#
+*.pyc
+.DS_Store

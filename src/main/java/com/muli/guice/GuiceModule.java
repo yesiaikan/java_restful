@@ -35,6 +35,8 @@ public class GuiceModule extends AbstractModule {
         bind(HttpClient.class).toProvider(CloseableHttpClientProvider.class);
         bind(IAuthenticatorFactory.class).to(AuthenticatorFactory.class).in(Singleton.class);
 
+//        bind(CacheService.class).to(CacheServiceImpl.class).in(Singleton.class);
+
     }
 
     @Provides

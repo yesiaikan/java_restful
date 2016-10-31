@@ -5,6 +5,7 @@ import com.dianxinos.msp.auth.IAuthenticatorFactory;
 import com.google.inject.Injector;
 import com.google.inject.Module;
 import com.muli.guice.GuiceModule;
+import com.muli.rest.api.impl.HelloWorld;
 import com.muli.rest.guice.FinderFactory;
 import com.muli.rest.guice.RestletGuice;
 import com.muli.signal.SignalManager;
@@ -66,18 +67,18 @@ public class DialApplication extends Application {
         Router router = new Router(getContext());
         // 管理端访问接口；
 //        router.attach("/_dianhua_api/health", ff.finder(HealthServerResource.class));
+        router.attach("/java_restful/hello", ff.finder(HelloWorld.class));
 
 
         // 需要统一认证的接口列表，如下：
         Router guardRouter = new Router(getContext());
-
 //        guardRouter.attach("taobao/query/remove", ff.finder(QueryTaobaoRemoveServerResource.class));
 
         IAuthenticatorFactory iAuthenticatorFactory = injector.getInstance(IAuthenticatorFactory.class);
         Authenticator authenticator = iAuthenticatorFactory.createAuthenticator(getContext());
         authenticator.setNext(guardRouter);
 
-        router.attach("/dianhua_api/", authenticator); // 添加认证支持；
+        router.attach("/java_restful/", authenticator); // 添加认证支持；
         return router;
     }
 
@@ -110,7 +111,7 @@ public class DialApplication extends Application {
             public void run() {
                 try {
                     component.stop();
-                    LOGGER.info("gracefully shutdown dianhua_api system");
+                    LOGGER.info("gracefully shutdown java_restful system");
                 } catch (Exception e) {
                     e.printStackTrace();
                 }

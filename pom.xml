@@ -32,18 +32,18 @@
             <version>4.8.2</version>
             <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>com.qad</groupId>
-            <artifactId>commontests</artifactId>
-            <version>1.1.4</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.qad</groupId>
-            <artifactId>qad-awl</artifactId>
-            <version>1.1.0</version>
-            <scope>test</scope>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>com.qad</groupId>-->
+            <!--<artifactId>commontests</artifactId>-->
+            <!--<version>1.1.4</version>-->
+            <!--<scope>test</scope>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>com.qad</groupId>-->
+            <!--<artifactId>qad-awl</artifactId>-->
+            <!--<version>1.1.0</version>-->
+            <!--<scope>test</scope>-->
+        <!--</dependency>-->
 
         <dependency>
             <groupId>jsonunit</groupId>
@@ -312,7 +312,7 @@
                 <configuration>
                     <!--<jvm>${env.JAVA_HOME_7}/bin/java</jvm>-->
                     <includes>
-                        <include>**/testcase/TestManager.java</include>
+                        <!--<include>**/testcase/TestManager.java</include>-->
                     </includes>
                     <testFailureIgnore>true</testFailureIgnore>
                 </configuration>
@@ -354,35 +354,35 @@
                     </formats>
                     <instrumentation>
                         <excludes>
-                            <exclude>**/*NaivePhoneLocation*.class</exclude>
-                            <exclude>**/*MissPhoneQueryer*.class</exclude>
-                            <exclude>**/com/dianxinos/dianhua_api/cooper/service/*.class</exclude>
-                            <exclude>**/com/dianxinos/dianhua_api/com.muli.rest/api/*.class</exclude>
-                            <exclude>**/*CacheServiceImpl*.class</exclude>
-                            <exclude>**/com/dianxinos/dianhua_api/model/client/Report*.class</exclude>
-                            <exclude>**/*AntiSpiderServiceImpl*.class</exclude>
-                            <exclude>**/*RefreshCachedServerResource*.class</exclude>
-                            <exclude>**/*QueryReportServerResource*.class</exclude>
-                            <exclude>**/*Listener*.class</exclude>
-                            <!--utils -->
-                            <exclude>**/com/dianxinos/dianhua_api/utils/*.class</exclude>
-                            <exclude>**/*FtpService*.class</exclude>
-                            <exclude>**/org/ardverk/collection/*.class</exclude>
-                            <exclude>**/com/dianxinos/dianhua_api/dao/morphia/ReportDAO*.class</exclude>
-                            <exclude>**/com/dianxinos/dianhua_api/com.muli.rest/guice/*.class</exclude>
-                            <exclude>**/com/dianxinos/dianhua_api/com.muli.rest/*.class</exclude>
-                            <exclude>**/*Retrieval*.class</exclude>
-                            <exclude>**/*MySqlDBSqlServiceImpl*.class</exclude>
-                            <exclude>**/*DXJSONResponseHandler*.class</exclude>
-                            <exclude>**/com/dianxinos/dianhua_api/utils/geo/*.class</exclude>
-                            <exclude>**/*ESHelper*.class</exclude>
-                            <exclude>**/*ReportPhoneMapWebSocketClient*.class</exclude>
+                            <!--<exclude>**/*NaivePhoneLocation*.class</exclude>-->
+                            <!--<exclude>**/*MissPhoneQueryer*.class</exclude>-->
+                            <!--<exclude>**/com/dianxinos/dianhua_api/cooper/service/*.class</exclude>-->
+                            <!--<exclude>**/com/dianxinos/dianhua_api/com.muli.rest/api/*.class</exclude>-->
+                            <!--<exclude>**/*CacheServiceImpl*.class</exclude>-->
+                            <!--<exclude>**/com/dianxinos/dianhua_api/model/client/Report*.class</exclude>-->
+                            <!--<exclude>**/*AntiSpiderServiceImpl*.class</exclude>-->
+                            <!--<exclude>**/*RefreshCachedServerResource*.class</exclude>-->
+                            <!--<exclude>**/*QueryReportServerResource*.class</exclude>-->
+                            <!--<exclude>**/*Listener*.class</exclude>-->
+                            <!--&lt;!&ndash;utils &ndash;&gt;-->
+                            <!--<exclude>**/com/dianxinos/dianhua_api/utils/*.class</exclude>-->
+                            <!--<exclude>**/*FtpService*.class</exclude>-->
+                            <!--<exclude>**/org/ardverk/collection/*.class</exclude>-->
+                            <!--<exclude>**/com/dianxinos/dianhua_api/dao/morphia/ReportDAO*.class</exclude>-->
+                            <!--<exclude>**/com/dianxinos/dianhua_api/com.muli.rest/guice/*.class</exclude>-->
+                            <!--<exclude>**/com/dianxinos/dianhua_api/com.muli.rest/*.class</exclude>-->
+                            <!--<exclude>**/*Retrieval*.class</exclude>-->
+                            <!--<exclude>**/*MySqlDBSqlServiceImpl*.class</exclude>-->
+                            <!--<exclude>**/*DXJSONResponseHandler*.class</exclude>-->
+                            <!--<exclude>**/com/dianxinos/dianhua_api/utils/geo/*.class</exclude>-->
+                            <!--<exclude>**/*ESHelper*.class</exclude>-->
+                            <!--<exclude>**/*ReportPhoneMapWebSocketClient*.class</exclude>-->
 
-                            <!--没用到的 废弃 -->
-                            <exclude>**/TagVerifyServiceImpl.class</exclude>
-                            <exclude>**/com/dianxinos/dianhua_api/aop/*.class</exclude>
-                            <exclude>**/*QueryIncomingOutgoingHistoryResource*.class</exclude>
-                            <exclude>**/*QueryReportHistoryResource*.class</exclude>
+                            <!--&lt;!&ndash;没用到的 废弃 &ndash;&gt;-->
+                            <!--<exclude>**/TagVerifyServiceImpl.class</exclude>-->
+                            <!--<exclude>**/com/dianxinos/dianhua_api/aop/*.class</exclude>-->
+                            <!--<exclude>**/*QueryIncomingOutgoingHistoryResource*.class</exclude>-->
+                            <!--<exclude>**/*QueryReportHistoryResource*.class</exclude>-->
                         </excludes>
                     </instrumentation>
                     <check></check>
@@ -425,7 +425,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>lib/</classpathPrefix>
-                            <mainClass>com.dianxinos.dianhua_api.com.muli.rest.DialApplication</mainClass>
+                            <mainClass>com.muli.rest.DialApplication</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
@@ -462,7 +462,7 @@
                 </configuration>
             </plugin>
         </plugins>
-        <finalName>dianhua_api-${project.version}</finalName>
+        <finalName>java_restful-${project.version}</finalName>
     </build>
 
 
